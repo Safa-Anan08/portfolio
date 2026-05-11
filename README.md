@@ -29,7 +29,7 @@ Designed with motion, responsiveness, and clean minimal aesthetics.
 ## Live Website
 
 ```bash
-https://your-portfolio.vercel.app
+https://portfolio-rust-xi-72.vercel.app/
 ```
 
 ---
@@ -155,7 +155,7 @@ npm run dev
 Open:
 
 ```bash
-https://portfolio-rust-xi-72.vercel.app/
+http://localhost:3000/
 ```
 
 ---
