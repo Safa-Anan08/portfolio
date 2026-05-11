@@ -8,7 +8,7 @@ import {
   SiMongodb,
   SiTailwindcss,
 } from "react-icons/si";
-
+import { DiCode, DiFirebase } from "react-icons/di";
 const technologies = [
   { name: "JavaScript", icon: <SiJavascript /> },
   { name: "React", icon: <FaReact /> },
@@ -27,7 +27,19 @@ const frontendSkills = [
   "ReactJS",
 ];
 
-const backendSkills = ["NodeJS", "MongoDB"];
+
+
+const backendSkills = ["NodeJS", "MongoDB","ExpressJs",
+"REST API Development","Firebase"];
+
+const toolsSkills = [
+  "Android Studio",
+  "VS Code",
+  "Git & GitHub",
+  "Netlify",
+  "MongoDB Atlas",
+  "Vercel",
+];
 
 export default function SkillsSection() {
   return (
@@ -90,7 +102,7 @@ export default function SkillsSection() {
               </div>
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#B6AE9F] to-[#FBF3D1] text-3xl text-[#5E5547]">
-                <FaReact />
+                <DiCode />
               </div>
             </div>
 
@@ -121,7 +133,7 @@ export default function SkillsSection() {
               </div>
 
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#B6AE9F] to-[#FBF3D1] text-3xl text-[#5E5547]">
-                <FaNodeJs />
+                <DiFirebase />
               </div>
             </div>
 
@@ -137,13 +149,54 @@ export default function SkillsSection() {
                   </div>
 
                   <span className="rounded-full bg-white/70 px-4 py-1 text-xs font-semibold text-[#6E6558]">
-                    Expert
+                    Intermediate
                   </span>
                 </div>
               ))}
             </div>
           </div>
+          
+          
         </div>
+        
+         <div className="mt-14 flex justify-center">
+  <div className="w-full max-w-2xl rounded-[35px] border border-white/50 bg-white/50 p-10 backdrop-blur-2xl shadow-xl">
+
+    <div className="mb-10 flex items-center justify-between">
+      <div>
+        <h3 className="text-3xl font-bold text-[#5E5547]">
+          Tools & Platforms
+        </h3>
+        <p className="mt-2 text-sm text-[#7A7266]">
+          Development ecosystem
+        </p>
+      </div>
+
+      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#B6AE9F] to-[#FBF3D1] text-3xl text-[#5E5547]">
+        <FaGitAlt />
+      </div>
+    </div>
+
+    <div className="space-y-6">
+      {toolsSkills.map((skill, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-between rounded-2xl bg-[#FBF3D1]/60 px-5 py-4 shadow-sm"
+        >
+          <div className="flex items-center gap-4">
+            <div className="h-3 w-3 rounded-full bg-[#B6AE9F]" />
+            <h4 className="font-semibold text-[#5E5547]">{skill}</h4>
+          </div>
+
+          <span className="rounded-full bg-white/70 px-4 py-1 text-xs font-semibold text-[#6E6558]">
+            Expert
+          </span>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</div>
       </div>
     </section>
   );

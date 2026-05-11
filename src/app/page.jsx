@@ -5,7 +5,7 @@ import QualificationSection from "@/components/QualificationSection";
 import AboutSection from "@/components/AboutSection";
 import HeroBg from "@/components/HeroBg";
 import AnimatedText from "@/components/AnimatedText";
-import Footer from "@/components/Footer";
+import ContactFooter from "@/components/ContactFooter";
 import HeroEffects from "@/components/HeroEffects";
 export default function Home() {
   return (
@@ -89,8 +89,8 @@ export default function Home() {
         Safa
       </h1>
 
-      <h1 className="hero-title text-7xl font-bold text-[#8d77ab] mb-6">
-        Developer
+      <h1 className="hero-title text-5xl font-bold text-[#8d77ab]  my-6">
+        Web & Mobile Application Developer
       </h1>
 
       <p className="hero-text text-lg text-gray-700 leading-relaxed mb-8">
@@ -101,7 +101,7 @@ export default function Home() {
 
       <div className="flex gap-5">
         <a
-          href="/resume.pdf"
+          href="/CV of Laamye-Al-Safa-Anan.pdf"
           download
           className="hero-btn btn bg-[#8d77ab] text-white border-none"
         >
@@ -138,7 +138,7 @@ export default function Home() {
         <ProjectsSection />
       </section>
   <section id="footer">
-        <Footer />
+        <ContactFooter />
       </section>
     </div>
   );

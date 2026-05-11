@@ -30,7 +30,7 @@ export default function HeroEffects() {
 
     gsap.to(".profile-img", {
       x: -18,
-      repeat: -1,
+      repeat: 1,
       yoyo: true,
       duration: 2.5,
       ease: "power1.inOut"

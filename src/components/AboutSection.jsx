@@ -44,9 +44,13 @@ export default function AboutSection() {
 
         {/* Description */}
         <p className="mx-auto mt-6 max-w-2xl text-[#7A7264] leading-7">
-          I am a dedicated full-stack developer focused on building modern,
+          {/* I am a dedicated full-stack developer focused on building modern,
           scalable, and visually appealing web applications. I enjoy turning
-          complex problems into simple, beautiful, and intuitive solutions.
+          complex problems into simple, beautiful, and intuitive solutions. */}
+          I am a passionate Full Stack Web & Mobile App Developer with strong expertise in building modern, scalable, and high-performance digital products.
+My development journey includes creating responsive websites, REST APIs, admin dashboards, SaaS platforms, and cross-platform mobile applications using modern technologies like HTML5, CSS3, Tailwind CSS, JavaScript, Node.js, Next.js, MongoDB, and Flutter.
+I focus on clean code architecture, responsive UI/UX, performance optimization, and user-friendly experiences. I enjoy transforming complex ideas into elegant digital solutions that are fast, secure, and visually engaging.
+I continuously explore new technologies and modern development trends to improve product quality and user experience.
         </p>
 
         {/* Highlights */}
