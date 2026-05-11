@@ -15,6 +15,11 @@ export default function ContactFooter() {
     service: "",
   });
 
+  const [toast, setToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastType, setToastType] = useState("success");
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".contact-left-card", {
@@ -37,36 +42,56 @@ export default function ContactFooter() {
   }, []);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
-    });
+    }));
+  };
+
+  const showToast = (message, type = "success") => {
+    setToastMessage(message);
+    setToastType(type);
+    setToast(true);
+
+    setTimeout(() => setToast(false), 4000);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    // validation
+    if (!formData.name || !formData.email) {
+      showToast("Please fill Name & Email", "error");
+      return;
+    }
 
-    const data = await res.json();
+    try {
+      setLoading(true);
 
-    if (data.success) {
-      alert("Message Sent Successfully!");
-
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        service: "",
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    } else {
-      alert("Failed to send message");
+
+      const data = await res.json();
+
+      if (data.success) {
+        showToast("Thank you for contacting 🎉    Will contact you soon ✨", "success");
+
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          service: "",
+        });
+      } else {
+        showToast("Failed to send message", "error");
+      }
+    } catch {
+      showToast("Something went wrong", "error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -75,13 +100,13 @@ export default function ContactFooter() {
       title: "EMAIL",
       subtitle: "safaanan8@gmail.com",
       icon: <Mail size={22} />,
-      link: "https://mail.google.com/mail/?view=cm&fs=1&to=safaanan8@gmail.com",
+      link: "mailto:safaanan8@gmail.com",
     },
     {
       title: "LINKEDIN",
       subtitle: "Safa Anan",
       icon: <FaLinkedinIn size={18} />,
-      link: "https://www.linkedin.com/in/safa-anan",
+      link: "https://linkedin.com",
     },
     {
       title: "WHATSAPP",
@@ -109,6 +134,8 @@ export default function ContactFooter() {
       <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#8d77ab]/10 blur-[140px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
+
+        {/* heading */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-[#5E5547]">
             Get in Touch
@@ -127,9 +154,7 @@ export default function ContactFooter() {
                 key={i}
                 className="contact-left-card group relative flex items-center gap-4 rounded-3xl border border-white/40 bg-white/70 p-6 shadow-sm backdrop-blur-xl"
               >
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#8d77ab]/10 to-[#c5c7bc]/10 opacity-0 group-hover:opacity-100 transition" />
-
-                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-[#8d77ab] shadow-md">
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-[#8d77ab]">
                   {item.icon}
                 </div>
 
@@ -137,16 +162,14 @@ export default function ContactFooter() {
                   <h3 className="text-[11px] tracking-[3px] text-[#7B7264]">
                     {item.title}
                   </h3>
-
-                  <p className="mt-1 text-sm font-medium text-[#5E5547] break-all">
+                  <p className="mt-1 text-sm font-medium text-[#5E5547]">
                     {item.subtitle}
                   </p>
 
                   <a
                     href={item.link}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 flex items-center gap-2 text-sm font-medium text-[#5E5547] hover:text-[#8d77ab]"
+                    className="mt-3 flex items-center gap-2 text-sm font-medium text-[#5E5547]"
                   >
                     Write me <ArrowRight size={15} />
                   </a>
@@ -158,12 +181,6 @@ export default function ContactFooter() {
           {/* RIGHT */}
           <div className="contact-form rounded-[36px] border border-white/40 bg-white/60 px-6 py-10 md:px-12 md:py-14 backdrop-blur-2xl shadow-xl">
 
-            <div className="mb-12 text-center">
-              <p className="text-sm text-[#7B7264]">
-                Have a nice project? Reach out and let's chat.
-              </p>
-            </div>
-
             <form onSubmit={handleSubmit} className="space-y-10">
 
               <div className="grid gap-10 md:grid-cols-2">
@@ -171,16 +188,16 @@ export default function ContactFooter() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="border-b border-[#c5c7bc] bg-transparent pb-3 outline-none focus:border-[#8d77ab]"
                   placeholder="Name"
+                  className="border-b bg-transparent pb-3 outline-none"
                 />
 
                 <input
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="border-b border-[#c5c7bc] bg-transparent pb-3 outline-none focus:border-[#8d77ab]"
                   placeholder="Email"
+                  className="border-b bg-transparent pb-3 outline-none"
                 />
               </div>
 
@@ -188,8 +205,8 @@ export default function ContactFooter() {
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full border-b border-[#c5c7bc] bg-transparent pb-3 outline-none focus:border-[#8d77ab]"
                 placeholder="Company"
+                className="w-full border-b bg-transparent pb-3 outline-none"
               />
 
               <div className="flex flex-wrap gap-3">
@@ -198,12 +215,12 @@ export default function ContactFooter() {
                     key={i}
                     type="button"
                     onClick={() =>
-                      setFormData({ ...formData, service: s })
+                      setFormData((p) => ({ ...p, service: s }))
                     }
-                    className={`rounded-full border px-4 py-2 text-sm transition ${
+                    className={`rounded-full border px-4 py-2 text-sm ${
                       formData.service === s
                         ? "bg-[#8d77ab] text-white"
-                        : "bg-[#f9f6e6] hover:bg-[#8d77ab] hover:text-white"
+                        : "bg-[#f9f6e6]"
                     }`}
                   >
                     {s}
@@ -213,9 +230,10 @@ export default function ContactFooter() {
 
               <button
                 type="submit"
+                disabled={loading}
                 className="rounded-full bg-[#8d77ab] px-7 py-3 text-white"
               >
-                Send Me
+                {loading ? "Sending..." : "Send Me"}
               </button>
 
             </form>
@@ -223,6 +241,38 @@ export default function ContactFooter() {
 
         </div>
       </div>
+
+      {/* CENTER TOAST */}
+      {toast && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+
+          <div
+            className="absolute inset-0 bg-black/20"
+            onClick={() => setToast(false)}
+          />
+
+          <div className="relative w-[320px] rounded-2xl bg-white p-6 text-center shadow-xl">
+
+            <h3
+              className={`text-lg font-semibold ${
+                toastType === "error"
+                  ? "text-red-500"
+                  : "text-[#5E5547]"
+              }`}
+            >
+              {toastMessage}
+            </h3>
+
+            <button
+              onClick={() => setToast(false)}
+              className="mt-5 w-full rounded-xl bg-[#8d77ab] py-2 text-white"
+            >
+              OK
+            </button>
+
+          </div>
+        </div>
+      )}
     </section>
   );
 }
