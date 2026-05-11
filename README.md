@@ -1,36 +1,212 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# Safa Anan
 
-First, run the development server:
+### Full Stack Web & Mobile Application Developer
+
+Building modern digital experiences with performance, clean architecture, and elegant UI.
+
+<br/>
+
+![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=nextdotjs)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-38BDF8?style=flat-square&logo=tailwindcss)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square)
+
+</div>
+
+---
+
+## Overview
+
+This portfolio is a modern developer showcase built to present projects, technical expertise, and professional background through a premium interactive experience.
+
+Designed with motion, responsiveness, and clean minimal aesthetics.
+
+---
+
+## Live Website
+
+```bash
+https://your-portfolio.vercel.app
+```
+
+---
+
+## Core Highlights
+
+### Responsive Premium Design
+
+A fully adaptive layout crafted for:
+
+- Desktop
+- Tablet
+- Mobile
+
+---
+
+### Interactive Motion System
+
+Powered by GSAP:
+
+- Scroll reveals
+- Slide animations
+- Smooth entrance transitions
+- Animated feedback interactions
+
+---
+
+### Smart Contact Experience
+
+Includes:
+
+- MongoDB storage
+- Validation system
+- Premium toast notifications
+- Async submission state
+
+---
+
+### Optimized Performance
+
+Built using modern Next.js architecture for:
+
+- Fast loading
+- Better SEO
+- Component efficiency
+- Scalable structure
+
+---
+
+## Built With
+
+### Frontend
+
+- Next.js
+- React
+- Tailwind CSS
+- DaisyUI
+- GSAP
+
+### Backend
+
+- Next.js API Routes
+
+### Database
+
+- MongoDB Atlas
+
+### Hosting
+
+- Vercel
+
+---
+
+## Sections Included
+
+```txt
+Hero
+About
+Skills
+Qualification
+Projects
+Contact
+```
+
+---
+
+## Local Setup
+
+### 1. Clone
+
+```bash
+git clone https://github.com/Safa-Anan08/portfolio
+```
+
+### 2. Install
+
+```bash
+npm install
+```
+
+### 3. Environment Variables
+
+Create:
+
+```env
+.env.local
+```
+
+Add:
+
+```env
+MONGODB_URI=your_mongodb_uri
+```
+
+---
+
+### 4. Start Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+https://portfolio-rust-xi-72.vercel.app/
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+src
+ ┣ app
+ ┣ components
+ ┣ api
+ ┣ public
+ ┗ styles
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact Data Model
 
-## Deploy on Vercel
+```json
+{
+  "name": "",
+  "email": "",
+  "company": "",
+  "service": "",
+  "createdAt": ""
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Future Plans
+
+- Dark mode
+- CMS integration
+- Blog system
+- Admin dashboard
+- Analytics panel
+
+---
+
+## Developer
+
+# Safa Anan
+
+Full Stack Developer focused on building elegant and scalable applications.
+
+
+<div align="center">
+
+Crafted with precision using Next.js
+
+</div>
