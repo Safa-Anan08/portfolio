@@ -81,7 +81,7 @@ export default function ContactFooter() {
       title: "LINKEDIN",
       subtitle: "Safa Anan",
       icon: <FaLinkedinIn size={18} />,
-      link: "https://www.linkedin.com/in/safa-anan8",
+      link: "https://www.linkedin.com/in/safa-anan",
     },
     {
       title: "WHATSAPP",
