@@ -149,7 +149,7 @@ export default function QualificationSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden py-28 bg-[#f6f3ea]"
+      className="relative overflow-hidden py-20 bg-[#f6f3ea]"
     >
       {/* glow */}
       <div className="absolute left-20 top-10 h-[300px] w-[300px] rounded-full bg-[#8d77ab]/10 blur-[120px]" />

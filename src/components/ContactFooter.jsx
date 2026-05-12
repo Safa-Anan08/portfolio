@@ -128,7 +128,7 @@ export default function ContactFooter() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#f6f3ea] py-24 px-4 md:px-10"
+      className="relative overflow-hidden bg-[#f6f3ea] py-18 px-4 md:px-10"
     >
       <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#8d77ab]/10 blur-[140px]" />
 

@@ -32,15 +32,15 @@ export default function Footer() {
 
   return (
     
-    <footer className="relative overflow-hidden bg-[#f9f6e6] px-6 md:px-14 py-20 border-t border-white/40">
-         <div className="my-10 h-px bg-gradient-to-r from-transparent via-[#8d77ab]/30 to-transparent" />
+    <footer className="relative overflow-hidden bg-[#f9f6e6] px-10 md:px-10 py-1 ">
+         <div className="  h-px bg-gradient-to-r from-transparent via-[#8d77ab]/30 to-transparent" />
       {/* glow */}
       <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-[#8d77ab]/10 blur-[140px]" />
       <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#c5c7bc]/20 blur-[140px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
 
-        <div className="grid gap-12 md:grid-cols-3 ">
+        <div className="grid gap-12 md:grid-cols-3 py-5 ">
 
           {/* LEFT */}
           <div>

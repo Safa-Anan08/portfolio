@@ -10,7 +10,7 @@ import { projects } from "@/data/projects";
 
 export default function ProjectsSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC] py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC] py-18">
       {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-[-120px] top-[-120px] h-[400px] w-[400px] rounded-full bg-[#B6AE9F]/30 blur-3xl" />

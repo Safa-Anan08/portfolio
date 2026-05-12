@@ -21,7 +21,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC] py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC] py-18">
       
       {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden">

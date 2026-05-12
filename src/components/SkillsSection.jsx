@@ -43,7 +43,7 @@ const toolsSkills = [
 
 export default function SkillsSection() {
   return (
-    <section className="relative overflow-hidden py-24 bg-gradient-to-br from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC]">
+    <section className="relative overflow-hidden py-18 bg-gradient-to-br from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC]">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-[-100px] top-[-100px] h-[350px] w-[350px] rounded-full bg-[#B6AE9F]/30 blur-3xl" />
         <div className="absolute bottom-[-120px] right-[-120px] h-[350px] w-[350px] rounded-full bg-white/40 blur-3xl" />
