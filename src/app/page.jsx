@@ -8,13 +8,14 @@ import HeroBg from "@/components/HeroBg";
 import AnimatedText from "@/components/AnimatedText";
 import ContactFooter from "@/components/ContactFooter";
 import HeroEffects from "@/components/HeroEffects";
-
+import Footer from "@/components/Footer";
 export default function Home() {
 
   return (
     <div className="bg-[#f9f6e6] min-h-screen">
+      <Navbar />
 <section className="hero min-h-screen px-10 relative overflow-hidden bg-[#f9f6e6]">
-
+    
   <HeroEffects />
   <HeroBg />
 
@@ -91,6 +92,7 @@ export default function Home() {
   <section id="footer">
         <ContactFooter />
       </section>
+      <Footer />
     </div>
   );
 }

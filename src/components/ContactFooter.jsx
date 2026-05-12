@@ -77,7 +77,7 @@ export default function ContactFooter() {
       const data = await res.json();
 
       if (data.success) {
-        showToast("Thank you for contacting 🎉    Will contact you soon ✨", "success");
+        showToast("Thank you for contacting 🎉 🎉🎉   Will contact you soon ✨", "success");
 
         setFormData({
           name: "",
@@ -122,7 +122,6 @@ export default function ContactFooter() {
     "Branding",
     "Webflow development",
     "App design",
-    "Graphic design",
     "Wordpress",
   ];
 
@@ -189,7 +188,7 @@ export default function ContactFooter() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Name"
-                  className="border-b bg-transparent pb-3 outline-none"
+                  className="border-b border-gray-400 bg-transparent pb-3 outline-none"
                 />
 
                 <input
@@ -197,7 +196,7 @@ export default function ContactFooter() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email"
-                  className="border-b bg-transparent pb-3 outline-none"
+                  className="border-b border-gray-400 bg-transparent pb-3 outline-none"
                 />
               </div>
 
@@ -206,7 +205,7 @@ export default function ContactFooter() {
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="Company"
-                className="w-full border-b bg-transparent pb-3 outline-none"
+                className="w-full border-b border-gray-400 bg-transparent pb-3 outline-none"
               />
 
               <div className="flex flex-wrap gap-3">
@@ -217,7 +216,7 @@ export default function ContactFooter() {
                     onClick={() =>
                       setFormData((p) => ({ ...p, service: s }))
                     }
-                    className={`rounded-full border px-4 py-2 text-sm ${
+                    className={`rounded-full border border-gray-400 px-4 py-2 text-sm text-gray-700 ${
                       formData.service === s
                         ? "bg-[#8d77ab] text-white"
                         : "bg-[#f9f6e6]"
