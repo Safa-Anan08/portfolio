@@ -6,7 +6,7 @@ import {
   SiJavascript,
   SiNestjs,
   SiMongodb,
-  SiTailwindcss,
+  SiTailwindcss,SiFlutter
 } from "react-icons/si";
 import { DiCode, DiFirebase } from "react-icons/di";
 const technologies = [
@@ -14,6 +14,7 @@ const technologies = [
   { name: "React", icon: <FaReact /> },
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "NestJS", icon: <SiNestjs /> },
+  { name: "Flutter", icon:<SiFlutter /> },
   { name: "MongoDB", icon: <SiMongodb /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   { name: "Git", icon: <FaGitAlt /> },

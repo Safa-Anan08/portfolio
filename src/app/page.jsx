@@ -2,11 +2,11 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import ContactFooter from "@/components/ContactFooter";
 import QualificationSection from "@/components/QualificationSection";
 import AboutSection from "@/components/AboutSection";
 import HeroBg from "@/components/HeroBg";
 import AnimatedText from "@/components/AnimatedText";
-import ContactFooter from "@/components/ContactFooter";
 import HeroEffects from "@/components/HeroEffects";
 import Footer from "@/components/Footer";
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
       </p>
 
       <h1 className="hero-title text-7xl font-bold">
-        Safa
+        Safa Anan
       </h1>
 
       <h1 className="hero-title text-5xl font-bold text-[#8d77ab]  my-6">
@@ -53,11 +53,11 @@ export default function Home() {
 
       <div className="flex gap-5">
         <a
-          href="/CV of Laamye-Al-Safa-Anan.pdf"
-          download
+          href="#footer"
+          
           className="hero-btn btn bg-[#8d77ab] text-white border-none"
         >
-          Download Resume
+          Let's Talk
         </a>
 
         <a

@@ -27,7 +27,7 @@ export default function Navbar() {
     S
   </div>
 
-  <h1 className="text-xl font-bold text-[#8d77ab]">Safa</h1>
+  <h1 className="text-xl font-bold text-[#8d77ab]">Safa Anan</h1>
 </div>
 
         {/* Desktop Menu */}
