@@ -18,7 +18,7 @@ export default function Footer() {
   const socials = [
     {
       icon: <FaLinkedinIn size={18} />,
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/safa-anan/",
     },
     {
       icon: <FaWhatsapp size={18} />,
@@ -26,7 +26,7 @@ export default function Footer() {
     },
     {
       icon: <FaGithub size={18} />,
-      href: "https://github.com",
+      href: "https://github.com/Safa-Anan08",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function Footer() {
           {/* LEFT */}
           <div>
             <h2 className="text-4xl font-bold text-[#8d77ab]">
-              Safa
+              Safa Anan
             </h2>
 
             <p className="mt-4 text-[#7B7264] leading-relaxed">
@@ -95,10 +95,10 @@ export default function Footer() {
 
         </div>
 
-        {/* divider */}
+  
         <div className="my-10 h-px bg-gradient-to-r from-transparent via-[#8d77ab]/30 to-transparent" />
 
-        {/* bottom */}
+  
         <div className="text-center text-sm text-[#7B7264]">
           © 2026 Safa Anan • Designed & Developed with precision
         </div>
