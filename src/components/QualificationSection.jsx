@@ -149,58 +149,60 @@ export default function QualificationSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden py-20 bg-[#f6f3ea]"
+      className="relative overflow-hidden py-12 sm:py-20 bg-[#f6f3ea] px-4 sm:px-6 lg:px-8"
     >
       {/* glow */}
-      <div className="absolute left-20 top-10 h-[300px] w-[300px] rounded-full bg-[#8d77ab]/10 blur-[120px]" />
-      <div className="absolute right-20 bottom-10 h-[300px] w-[300px] rounded-full bg-[#c5c7bc]/20 blur-[120px]" />
+      <div className="absolute left-20 top-10 h-[250px] sm:h-[300px] w-[250px] sm:w-[300px] rounded-full bg-[#8d77ab]/10 blur-[120px] pointer-events-none" />
+      <div className="absolute right-20 bottom-10 h-[250px] sm:h-[300px] w-[250px] sm:w-[300px] rounded-full bg-[#c5c7bc]/20 blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4">
+      <div className="relative z-10 mx-auto max-w-7xl">
 
         {/* heading */}
-        <div className="text-center mb-20">
-          <p className="text-sm uppercase tracking-[5px] text-[#8d77ab]">
+        <div className="text-center mb-12 sm:mb-20">
+          <p className="text-xs sm:text-sm uppercase tracking-[3px] sm:tracking-[5px] text-[#8d77ab] font-semibold">
             Academic Background
           </p>
 
-          <h2 className="mt-4 text-5xl font-bold text-[#5E5547]">
+          <h2 className="mt-3 sm:mt-4 text-3xl sm:text-4xl md:text-5xl font-bold text-[#5E5547]">
             Qualification
           </h2>
 
-          <p className="mt-4 text-[#7B7264]">
+          <p className="mt-2 sm:mt-4 text-sm sm:text-base text-[#7B7264]">
             Building knowledge through years of learning
           </p>
         </div>
 
         {/* grid */}
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
           {educationData.map((item, index) => (
             <div
               key={index}
-              className="edu-card group relative overflow-hidden rounded-[32px] border border-white/50 bg-white/70 p-8 backdrop-blur-2xl shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl"
+              className="edu-card group relative overflow-hidden rounded-[28px] sm:rounded-[32px] border border-white/50 bg-white/70 p-5 sm:p-8 backdrop-blur-2xl shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl flex flex-col justify-between"
             >
               {/* top glow */}
-              <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-[#8d77ab]/10 blur-3xl group-hover:bg-[#8d77ab]/20 transition-all duration-500" />
+              <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-[#8d77ab]/10 blur-3xl group-hover:bg-[#8d77ab]/20 transition-all duration-500 pointer-events-none" />
 
-              {/* icon */}
-              <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-3xl bg-[#8d77ab]/10 text-[#8d77ab]">
-                <GraduationCap size={30} />
+              <div>
+                {/* icon */}
+                <div className="relative z-10 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl sm:rounded-3xl bg-[#8d77ab]/10 text-[#8d77ab]">
+                  <GraduationCap className="w-7 h-7 sm:w-8 sm:h-8" />
+                </div>
+
+                {/* content */}
+                <div className="relative z-10 mt-6 sm:mt-8">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#5E5547]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 sm:mt-3 text-sm sm:text-base text-[#7B7264] leading-relaxed">
+                    {item.institute}
+                  </p>
+                </div>
               </div>
 
-              {/* content */}
-              <div className="relative z-10 mt-8">
-                <h3 className="text-2xl font-bold text-[#5E5547]">
-                  {item.title}
-                </h3>
-
-                <p className="mt-3 text-[#7B7264] leading-relaxed">
-                  {item.institute}
-                </p>
-
-                <div className="mt-6 flex items-center gap-2 text-sm text-[#8d77ab] font-medium">
-                  <CalendarDays size={16} />
-                  {item.year}
-                </div>
+              <div className="relative z-10 mt-5 sm:mt-6 flex items-center gap-2 text-xs sm:text-sm text-[#8d77ab] font-medium">
+                <CalendarDays className="w-4 h-4 shrink-0" />
+                {item.year}
               </div>
 
               {/* bottom accent */}
