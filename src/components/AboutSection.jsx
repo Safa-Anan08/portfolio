@@ -35,7 +35,7 @@ export default function AboutSection() {
       id="about"
       className="relative overflow-hidden bg-gradient-to-br from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC] py-12 sm:py-18 px-4 sm:px-6 lg:px-8"
     >
-      {/* Background Glow */}
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute left-[-120px] top-[-120px] h-[300px] sm:h-[400px] w-[300px] sm:w-[400px] rounded-full bg-[#B6AE9F]/30 blur-3xl" />
 
@@ -43,18 +43,17 @@ export default function AboutSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl text-center">
-        {/* Badge */}
+
         <span className="rounded-full border border-[#B6AE9F]/30 bg-white/60 px-4 sm:px-5 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-[#6B6255] backdrop-blur-xl">
           About Me
         </span>
 
-        {/* Typing Title */}
+
         <h2 className="mt-6 sm:mt-8 text-2xl sm:text-4xl font-black text-[#5E5547] md:text-5xl">
           {text}
           <span className="animate-pulse">|</span>
         </h2>
 
-        {/* Programming Journey */}
         <div className="mx-auto mt-6 max-w-3xl text-left sm:text-center">
           <p className="text-[#7A7264] text-sm sm:text-base leading-6 sm:leading-7">
             I am a passionate Full Stack Web & Mobile App Developer with
@@ -76,9 +75,9 @@ export default function AboutSection() {
           </p>
         </div>
 
-        {/* Hobbies & Personality */}
+
         <div className="mt-8 sm:mt-10 grid gap-5 sm:gap-6 grid-cols-1 md:grid-cols-2">
-          {/* Hobbies */}
+
           <div className="rounded-2xl bg-white/50 p-4 sm:p-6 text-left shadow-lg backdrop-blur-xl">
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-[#FBF3D1] text-[#5E5547]">
@@ -99,7 +98,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Personality */}
+
           <div className="rounded-2xl bg-white/50 p-4 sm:p-6 text-left shadow-lg backdrop-blur-xl">
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-[#FBF3D1] text-[#5E5547]">
@@ -122,9 +121,9 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Highlights */}
+
         <div className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 grid-cols-1 md:grid-cols-3">
-          {/* Clean Code */}
+
           <div className="rounded-2xl bg-white/50 p-4 sm:p-6 shadow-lg backdrop-blur-xl">
             <div className="mx-auto flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-[#FBF3D1] text-[#5E5547]">
               <FaCode />
@@ -139,7 +138,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Modern UI */}
+
           <div className="rounded-2xl bg-white/50 p-4 sm:p-6 shadow-lg backdrop-blur-xl">
             <div className="mx-auto flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-[#FBF3D1] text-[#5E5547]">
               <FaLaptopCode />
@@ -154,7 +153,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Performance */}
+
           <div className="rounded-2xl bg-white/50 p-4 sm:p-6 shadow-lg backdrop-blur-xl">
             <div className="mx-auto flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-[#FBF3D1] text-[#5E5547]">
               <FaRocket />

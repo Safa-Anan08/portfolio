@@ -21,7 +21,7 @@ export default function Home() {
 
         <div className="hero-content flex-col lg:flex-row-reverse gap-8 sm:gap-12 lg:gap-24 relative z-10 w-full max-w-7xl mx-auto">
 
-          {/* Image */}
+
           <div className="relative flex justify-center w-full lg:w-auto">
             <img
               src="/picture.png"
@@ -30,7 +30,7 @@ export default function Home() {
             />
           </div>
 
-          {/* Content */}
+
           <div className="max-w-xl w-full text-left">
 
             <p className="hero-title text-xl sm:text-2xl mb-2 sm:mb-4 text-[#8d77ab]">
@@ -75,17 +75,17 @@ export default function Home() {
         <AboutSection />
       </section>
 
-      {/* SKILLS */}
+
       <section id="skills">
         <SkillsSection />
       </section>
 
-      {/* QUALIFICATION */}
+
       <section id="qualification">
         <QualificationSection />
       </section>
 
-      {/* PROJECTS */}
+
       <section id="projects">
         <ProjectsSection />
       </section>

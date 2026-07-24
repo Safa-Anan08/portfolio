@@ -9,7 +9,7 @@ export default function NotFound() {
       <Navbar />
 
       <main className="flex-1 flex items-center justify-center px-4 py-20 relative overflow-hidden">
-        {/* Glow */}
+
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[350px] w-[350px] rounded-full bg-[#8d77ab]/10 blur-[130px] pointer-events-none" />
 
         <div className="relative z-10 max-w-md w-full rounded-[32px] border border-white/60 bg-white/70 p-8 sm:p-10 text-center shadow-xl backdrop-blur-2xl">

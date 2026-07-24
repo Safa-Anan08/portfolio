@@ -11,10 +11,10 @@ export default function Navbar() {
 
       <div className="flex items-center justify-between py-2">
 
-        {/* Left Side */}
+
         <div className="flex items-center gap-2 sm:gap-3">
 
-          {/* Mobile Menu Left */}
+
           <button
             className="md:hidden text-[#8d77ab] p-1 focus:outline-none"
             onClick={() => setOpen(!open)}

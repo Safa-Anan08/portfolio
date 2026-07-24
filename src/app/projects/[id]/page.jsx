@@ -34,13 +34,13 @@ export default async function ProjectDetailsPage({ params }) {
     <div className="bg-[#f9f6e6] min-h-screen flex flex-col text-[#5E5547]">
       <Navbar />
 
-      {/* Decorative Glow Elements */}
+
       <div className="relative overflow-hidden flex-1">
         <div className="absolute left-[-100px] top-10 h-[350px] w-[350px] rounded-full bg-[#8d77ab]/10 blur-[130px] pointer-events-none" />
         <div className="absolute right-[-100px] bottom-10 h-[350px] w-[350px] rounded-full bg-[#c5c7bc]/20 blur-[130px] pointer-events-none" />
 
         <main className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
-          {/* A. Back Navigation */}
+
           <div className="mb-6 sm:mb-8">
             <Link
               href="/#projects"
@@ -51,7 +51,7 @@ export default async function ProjectDetailsPage({ params }) {
             </Link>
           </div>
 
-          {/* B. Project Header */}
+
           <div className="space-y-4 sm:space-y-6">
             <div>
               <span className="inline-block rounded-full border border-[#B6AE9F]/30 bg-white/60 px-3.5 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#8d77ab] backdrop-blur-xl">
@@ -65,7 +65,7 @@ export default async function ProjectDetailsPage({ params }) {
               </p>
             </div>
 
-            {/* Header Tech Badges */}
+
             <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1 sm:pt-2">
               {project.tech.map((item, index) => (
                 <span
@@ -77,14 +77,13 @@ export default async function ProjectDetailsPage({ params }) {
               ))}
             </div>
 
-            {/* Project Image Gallery */}
             <ProjectImageCarousel
               images={project.images || [project.image]}
               projectName={project.name}
             />
           </div>
 
-          {/* C. Project Overview */}
+
           <div className="rounded-[24px] sm:rounded-[32px] border border-white/60 bg-white/70 p-4 sm:p-8 backdrop-blur-2xl shadow-lg mb-6 sm:mb-8">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
               <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-[#8d77ab]/15 text-[#8d77ab] shrink-0">
@@ -99,7 +98,7 @@ export default async function ProjectDetailsPage({ params }) {
             </p>
           </div>
 
-          {/* D. Key Features */}
+
           {project.features && project.features.length > 0 && (
             <div className="rounded-[24px] sm:rounded-[32px] border border-white/60 bg-white/70 p-4 sm:p-8 backdrop-blur-2xl shadow-lg mb-6 sm:mb-8">
               <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -126,7 +125,7 @@ export default async function ProjectDetailsPage({ params }) {
             </div>
           )}
 
-          {/* E. Technology Stack */}
+
           <div className="rounded-[24px] sm:rounded-[32px] border border-white/60 bg-white/70 p-4 sm:p-8 backdrop-blur-2xl shadow-lg mb-6 sm:mb-8">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-[#8d77ab]/15 text-[#8d77ab] shrink-0">
@@ -151,7 +150,7 @@ export default async function ProjectDetailsPage({ params }) {
             </div>
           </div>
 
-          {/* F. Challenges Faced */}
+
           {project.challenges && (
             <div className="rounded-[24px] sm:rounded-[32px] border border-white/60 bg-white/70 p-4 sm:p-8 backdrop-blur-2xl shadow-lg mb-6 sm:mb-8">
               <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
@@ -168,7 +167,7 @@ export default async function ProjectDetailsPage({ params }) {
             </div>
           )}
 
-          {/* G. Future Improvements & Plans */}
+
           {project.future && (
             <div className="rounded-[24px] sm:rounded-[32px] border border-white/60 bg-white/70 p-4 sm:p-8 backdrop-blur-2xl shadow-lg mb-6 sm:mb-8">
               <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
@@ -185,7 +184,6 @@ export default async function ProjectDetailsPage({ params }) {
             </div>
           )}
 
-          {/* H. Project Actions (Live & GitHub Links) */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-14">
             {project.live && (
               <a
@@ -211,7 +209,7 @@ export default async function ProjectDetailsPage({ params }) {
             )}
           </div>
 
-          {/* I. Bottom CTA */}
+
           <div className="rounded-[24px] sm:rounded-[32px] border border-white/60 bg-gradient-to-r from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC] p-5 sm:p-8 lg:p-12 text-center shadow-xl">
             <h3 className="text-xl sm:text-3xl font-bold text-[#5E5547]">
               Explore More Projects
