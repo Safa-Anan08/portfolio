@@ -7,22 +7,27 @@ export default function HeroBg() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const boxes = containerRef.current.querySelectorAll(".box");
+    if (!containerRef.current) return;
 
-    gsap.timeline({ repeat: -1, repeatDelay: 0.5 })
-      .to(boxes, {
-        duration: 1.5,
-        scale: 0.3,
-        rotation: 180,
-        yoyo: true,
-        repeat: 1,
-        ease: "power1.inOut",
-        stagger: {
-          each: 0.08,
-          from: "center"
-        }
-      });
+    const ctx = gsap.context(() => {
+      const boxes = containerRef.current.querySelectorAll(".box");
 
+      gsap.timeline({ repeat: -1, repeatDelay: 0.5 })
+        .to(boxes, {
+          duration: 1.5,
+          scale: 0.3,
+          rotation: 180,
+          yoyo: true,
+          repeat: 1,
+          ease: "power1.inOut",
+          stagger: {
+            each: 0.08,
+            from: "center"
+          }
+        });
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -33,7 +38,7 @@ export default function HeroBg() {
       {[...Array(40)].map((_, i) => (
         <div
           key={i}
-          className="box w-8 h-8 rounded-lg bg-[#90c1d3]"
+          className="box w-8 h-8 rounded-lg bg-[#be1ee3]"
         />
       ))}
     </div>

@@ -73,12 +73,19 @@ export default function AboutSection() {
             modern development trends to improve product quality and user
             experience.
           </p>
+          <p className="mt-4 sm:mt-5 text-[#7A7264] text-sm sm:text-base leading-6 sm:leading-7">
+            Outside programming, I enjoy exploring creative ideas, learning
+            new things, listening to music, and spending quality time with
+            family and friends. I also enjoy discovering new technologies and
+            finding inspiration from everyday life, which often helps me
+            bring fresh ideas and creativity into my work.
+          </p>
         </div>
 
 
         <div className="mt-8 sm:mt-10 grid gap-5 sm:gap-6 grid-cols-1 md:grid-cols-2">
 
-          <div className="rounded-2xl bg-white/50 p-4 sm:p-6 text-left shadow-lg backdrop-blur-xl">
+          {/* <div className="rounded-2xl bg-white/50 p-4 sm:p-6 text-left shadow-lg backdrop-blur-xl">
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-[#FBF3D1] text-[#5E5547]">
                 <FaHeart />
@@ -96,9 +103,9 @@ export default function AboutSection() {
               finding inspiration from everyday life, which often helps me
               bring fresh ideas and creativity into my work.
             </p>
-          </div>
+          </div> */}
 
-
+          {/* 
           <div className="rounded-2xl bg-white/50 p-4 sm:p-6 text-left shadow-lg backdrop-blur-xl">
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-[#FBF3D1] text-[#5E5547]">
@@ -118,11 +125,11 @@ export default function AboutSection() {
               always try to learn from every experience and grow both
               personally and professionally.
             </p>
-          </div>
+          </div> */}
         </div>
 
 
-        <div className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 grid-cols-1 md:grid-cols-3">
+        {/* <div className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 grid-cols-1 md:grid-cols-3">
 
           <div className="rounded-2xl bg-white/50 p-4 sm:p-6 shadow-lg backdrop-blur-xl">
             <div className="mx-auto flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-[#FBF3D1] text-[#5E5547]">
@@ -167,7 +174,7 @@ export default function AboutSection() {
               Fast and optimized user experience.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -3,10 +3,10 @@ export const projects = [
   {
     id: "1",
     name: "Aurora Interiors AI",
-    image: "/projects/aurora-1.png",
+    image: "/projects/aurora-0.png",
 
     images: [
-      "/projects/aurora-1.png",
+      "/projects/aurora-0.png",
       "/projects/aurora-2.png",
       "/projects/aurora-3.png",
       "/projects/aurora-4.png",
@@ -48,13 +48,60 @@ export const projects = [
 
     future:
       "Improve AI-powered space planning, add advanced room visualization and 3D interior previews, provide more accurate furniture placement recommendations, introduce image-based room analysis, expand AI-generated design concepts, add personalized shopping recommendations, and improve the overall AI design consultation experience.",
-  }, {
+  },
+  {
     id: "2",
-    name: "PromptBay",
-
-    image: "/projects/promptbay-1.png",
+    name: "Book Abode",
+    image: "/projects/bookabode-1.png",
 
     images: [
+      "/projects/bookabode-1.png",
+      "/projects/bookabode-2.png",
+      "/projects/bookabode-3.png",
+      "/projects/bookabode-4.png",
+      "/projects/bookabode-5.png",
+    ],
+
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "OpenAI API",
+      "Stripe",
+    ],
+
+    live: "https://book-abode.vercel.app",
+    github: "https://github.com/Safa-Anan08/bookabode-marketplace",
+
+    description:
+      "BookAbode is a modern, full-stack online book management and discovery platform designed to provide users with a seamless way to explore, manage, wishlist, and download books. The platform includes secure authentication, personalized user dashboards, comprehensive book management, advanced search and filtering, and a dedicated admin dashboard for managing users, books, reports, wishlists, and contact messages.",
+
+
+
+    features: [
+      "Secure Authentication — User registration, login, Google Sign-In, JWT authentication, protected routes, and persistent login sessions.",
+      "Wishlist System — Add or remove books from wishlist with real-time updates and a dedicated wishlist page.", "Advanced Book Exploration — Search books, filter by category and availability, and sort results efficiently.", "Advanced Book Exploration — Search books, filter by category and availability, and sort results efficiently.", "User Dashboard — Manage personal books, wishlist items, and profile information.", "Admin Dashboard — View analytics and manage users, books, wishlists, reports, contact messages, and recent activities.", "Analytics & Visualization — Dashboard statistics and data visualization using Recharts.", "Fully Responsive UI — Mobile-first design optimized for mobile, tablet, and desktop screens.",
+      "Modern User Interface — Premium color palette, cinematic hero slider, Swiper animations, loading skeletons, toast notifications, and beautiful empty states.",
+      "Book PDF Download — Users can download available book PDFs directly from the platform.", "Protected Routes — Restricts authenticated and admin-only pages based on user permissions.", "Contact Management — Admin can view and manage messages submitted through the contact system.",
+    ],
+
+    challenges:
+      "Implementing Secure Authentication: Designing JWT-based authentication, protected routes, persistent sessions, and Google authentication while maintaining a smooth user experience.Role-Based Access Control: Managing different permissions between regular users and administrators and ensuring admin-only features remain protected.Book Management Logic: Handling CRUD operations for books while keeping ownership, update, delete, reporting, and PDF download functionality properly synchronized with the backend.",
+
+    future:
+      "Improve AI Book Recommendations,  EPUB Reader, Book Reviews, Comments & Discussions, Email Verification"
+  },
+  {
+    id: "3",
+    name: "PromptBay",
+
+    image: "/projects/promptbay-0.png",
+
+    images: [
+      "/projects/promptbay-0.png",
       "/projects/promptbay-1.png",
       "/projects/promptbay-2.png",
       "/projects/promptbay-3.png",
@@ -103,7 +150,7 @@ export const projects = [
       "Add AI-powered prompt recommendations, advanced search and filtering, creator analytics, improved notification features, prompt rating and review systems, and more personalized AI-driven marketplace experiences.",
   },
   {
-    id: "3",
+    id: "4",
     name: "Tiles Gallery",
     image: "/project1.png",
 
@@ -144,7 +191,7 @@ export const projects = [
   },
 
   {
-    id: "4",
+    id: "5",
     name: "Keen Keeper",
     image: "/project5.png",
 
@@ -183,7 +230,7 @@ export const projects = [
   },
 
   {
-    id: "5",
+    id: "6",
     name: "Github Issues Tracker",
     image: "/project6.png",
     images: [
@@ -214,7 +261,7 @@ export const projects = [
   },
 
   {
-    id: "6",
+    id: "7",
     name: "Job Application Tracker",
     image: "/project3.png",
 

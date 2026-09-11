@@ -5,10 +5,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import { FiExternalLink, FiEye } from "react-icons/fi";
+import { FiExternalLink, FiEye, FiArrowRight } from "react-icons/fi";
 import { projects } from "@/data/projects";
 
 export default function ProjectsSection() {
+  const featuredProjects = projects.slice(0, 3);
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#FBF3D1] via-[#DEDED1] to-[#C5C7BC] py-12 sm:py-18 px-4 sm:px-6 lg:px-8">
       {/* Background Glow */}
@@ -30,7 +31,7 @@ export default function ProjectsSection() {
 
         {/* Cards Grid */}
         <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-7 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
+          {featuredProjects.map((project) => (
             <div
               key={project.id}
               className="group flex flex-col overflow-hidden rounded-[24px] sm:rounded-[28px] border border-white/50 bg-white/60 backdrop-blur-2xl shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#B6AE9F]/30"
@@ -42,7 +43,7 @@ export default function ProjectsSection() {
                   alt={project.name}
                   width={400}
                   height={240}
-                  className="max-h-full max-w-full object-contain transition duration-700 group-hover:scale-105"
+                  className="max-h-full max-w-full object-cover transition duration-700 group-hover:scale-105"
                 />
               </div>
 
@@ -108,7 +109,8 @@ export default function ProjectsSection() {
             </div>
           ))}
         </div>
+        {/* View More Projects Button */} {projects.length > 3 && (<div className="mt-10 sm:mt-14 flex justify-center"> <Link href="/projects" className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#8d77ab] px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#7b6697] hover:-translate-y-1 hover:shadow-xl" > View More Projects <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" /> </Link> </div>)}
       </div>
     </section>
   );
-}
+}

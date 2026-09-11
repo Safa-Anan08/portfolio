@@ -34,7 +34,7 @@ export default function Home() {
           <div className="max-w-xl w-full text-left">
 
             <p className="hero-title text-xl sm:text-2xl mb-2 sm:mb-4 text-[#8d77ab]">
-              Hello I'm
+              Hello I&apos;m
             </p>
 
             <h1 className="hero-title text-4xl sm:text-6xl lg:text-7xl font-bold">

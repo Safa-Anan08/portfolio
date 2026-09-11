@@ -59,9 +59,17 @@ export default function ContactFooter() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (loading) return;
+
     // validation
-    if (!formData.name || !formData.email) {
+    if (!formData.name.trim() || !formData.email.trim()) {
       showToast("Please fill Name & Email", "error");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email.trim())) {
+      showToast("Please enter a valid email address", "error");
       return;
     }
 
@@ -76,7 +84,7 @@ export default function ContactFooter() {
 
       const data = await res.json();
 
-      if (data.success) {
+      if (res.ok && data.success) {
         showToast("Thank you for contacting 🎉 🎉🎉   Will contact you soon ✨", "success");
 
         setFormData({
@@ -86,10 +94,10 @@ export default function ContactFooter() {
           service: "",
         });
       } else {
-        showToast("Failed to send message", "error");
+        showToast(data.error || "Failed to send message", "error");
       }
     } catch {
-      showToast("Something went wrong", "error");
+      showToast("Something went wrong. Please try again later.", "error");
     } finally {
       setLoading(false);
     }

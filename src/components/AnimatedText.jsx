@@ -7,22 +7,28 @@ export default function AnimatedText({ text, className }) {
   const textRef = useRef(null);
 
   useEffect(() => {
-    const chars = textRef.current.querySelectorAll("span");
+    if (!textRef.current) return;
 
-    gsap.fromTo(
-      chars,
-      {
-        y: 40,
-        opacity: 0
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.03,
-        ease: "power3.out"
-      }
-    );
+    const ctx = gsap.context(() => {
+      const chars = textRef.current.querySelectorAll("span");
+
+      gsap.fromTo(
+        chars,
+        {
+          y: 40,
+          opacity: 0
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.03,
+          ease: "power3.out"
+        }
+      );
+    }, textRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
